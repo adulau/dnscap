@@ -22,8 +22,14 @@ LANG= en_US
 # set up defaults for configurables
 HAVE_BINDLIB= 1
 BINDLIB= -lbind
-BINDCFLAGS= `PATH=/usr/local/bin:$$PATH isc-config.sh --cflags`
-BINDLDFLAGS= `PATH=/usr/local/bin:$$PATH isc-config.sh --libs`
+
+# If you are using libbind-dev in Ubuntu/Debian
+BINDCFLAGS= `PATH=/usr/local/bin:$$PATH isc-config.sh --cflags dns`
+BINDLDFLAGS= `PATH=/usr/local/bin:$$PATH isc-config.sh --libs dns`
+
+#BINDCFLAGS= `PATH=/usr/local/bin:$$PATH isc-config.sh --cflags`
+#BINDLDFLAGS= `PATH=/usr/local/bin:$$PATH isc-config.sh --libs`
+
 GCCWARN= -W -Wall -Werror -Wcast-qual -Wpointer-arith -Wwrite-strings \
 	-Wmissing-prototypes -Wbad-function-cast -Wnested-externs \
 	-Wunused -Wshadow -Wmissing-noreturn -Wswitch-enum -Wformat-nonliteral
