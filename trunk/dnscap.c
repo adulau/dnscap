@@ -35,9 +35,13 @@ static const char version[] = "V1.0-RC6 (October 2007)";
 
 #ifdef __linux__
 # define __FAVOR_BSD
+#ifndef __USE_GNU
 # define __USE_GNU
-# define _GNU_SOURCE
-# include <net/ethernet.h>
+#endif
+#ifndef _GNU_SOURCE_
+# define _GNU_SOURCE_
+#endif
+#include <net/ethernet.h>
 #endif
 
 #ifdef __FreeBSD__

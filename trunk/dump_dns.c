@@ -33,7 +33,9 @@ dump_dns(const u_char *payload, size_t paylen,
 #else
 
 #ifdef __linux__
-# define _GNU_SOURCE
+#ifndef _GNU_SOURCE_
+# define _GNU_SOURCE_
+#endif
 # define __USE_POSIX199309
 #endif
 
