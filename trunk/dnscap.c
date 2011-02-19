@@ -1635,7 +1635,7 @@ dumper_close(void) {
 		free(dumpnamepart); dumpnamepart = NULL;
 		free(dumpname); dumpname = NULL;
 		if (cmd != NULL) {
-			system(cmd);
+			ret = system(cmd);
 			free(cmd);
 		}
 		if (kick_cmd == NULL)
