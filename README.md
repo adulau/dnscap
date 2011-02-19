@@ -2,10 +2,11 @@ dnscap
 ======
 
 dnscap is a network capture utility designed specifically for DNS traffic. 
-It produces binary data in pcap(3) format. This utility is similar to tcpdump(1),
-but has a number of features tailored to DNS transactions and protocol options.
+It produces binary data in pcap(3) format or text output like dig. 
+This utility is similar to tcpdump(1), but has a number of features 
+tailored to DNS transactions and protocol options.
 
-For more information: https://www.dns-oarc.net/tools/dnscap
+For more information about dnscap check the [OARC website](https://www.dns-oarc.net/tools/dnscap).
 
 patched dnscap
 --------------
